@@ -1,0 +1,33 @@
+<h1> Users Details</h1>
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Title</th>
+                <th>Birthdate</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!--   for (Todo todo: todos) {  -->
+            <tr>
+                <td>1001</td>
+                <td>Sterling</td>
+                <td>Sterling@gmail.com</td>
+                <td>Mr</td>
+                <td>2021/20/10</td>
+                <td><button class="btn btn-success">Update</button></td>
+                <td><button class="btn btn-warning">Delete</button></td>
+            </tr>
+            <!-- } -->
+        </tbody>
+
+    </table>
+
+    <div class="row">
+        <button (click)="AddUser()" class=" btn btn-success">Add</button>
+    </div>
