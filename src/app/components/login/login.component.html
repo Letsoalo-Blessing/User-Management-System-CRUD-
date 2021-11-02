@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="form-box">
+        <form *ngIf="!isLoggedIn" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" nonvalidate>
+            <h1>User login</h1>
+            <div class="input-box">
+                <input type="text" name="username" placeholder="Enter username" [(ngModel)]="form.username" required #username="ngModel">
+            </div>
+            <div class="alert alert-danger" role="alert" *ngIf="f.submitted && username.invalid">
+                Username is required!
+            </div>
+            <div class="input-box">
+                <input type="password" name="password" placeholder="Enter password" [(ngModel)]="form.password" required minlength="6" #password="ngModel">
+            </div>
+            <div class="alert alert-danger" role="alert" *ngIf="f.submitted && password.invalid">
+                <div *ngIf="password.errors.required">Password is required</div>
+                <div *ngIf="password.errors.minlength">
+                    Password must be at least 6 characters
+                </div>
+            </div>
+            <button type="submit" class="login-btn">LOGIN</button>
+        </form>
+    </div>
+</div>

@@ -1,13 +1,10 @@
-<H1>Add User</H1>
+<H1>Edit User</H1>
 
 <div class="container">
-    <!-- <div class="alert alert-warning" *ngIf="todoForm.dirty && todoForm.invalid">Enter valid values</div>
-    <div class="alert alert-warning" *ngIf="todoForm.dirty && targetDate.invalid">Enter valid Target Date</div>
-    <div class="alert alert-warning" *ngIf="todoForm.dirty && description.invalid">Enter atleast 5 characters in Description</div> -->
 
     <form *ngIf="!isSuccessful" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
         <fieldset class="form-group">
-            <label>Userame</label>
+            <label>Username</label>
             <input type="text" class="form-control" name="username" [(ngModel)]="form.username" minlength="3" maxlength="30" #username="ngModel" required>
         </fieldset>
         <div class="alert-danger" *ngIf="f.submitted && username.invalid">

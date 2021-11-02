@@ -1,0 +1,12 @@
+version: 'version 20.10.8' #specifying docker version
+
+services:
+  angular-service:
+    container_name: user-angular-app
+      build: ./
+      volumes:
+      -'./:/usr/src/app'
+        ports:
+        - "4201:4200"
+          command:>
+           bash -c "npm start"

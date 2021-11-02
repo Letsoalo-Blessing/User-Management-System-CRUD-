@@ -1,18 +1,15 @@
 <header>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <div><a href="/users" class="navbar-brand">User Management System</a></div>
+        <div><a routerLink="/users" class="navbar-brand">User Management System</a></div>
 
-        <!-- <ul class="navbar-nav">
-            <li>
-                <a routerLink="/AddUser" class="nav-link">Users</a>
-            </li>
-        </ul> -->
 
-        <!-- <ul class="navbar-nav navbar-collapse justify-content-end">
-            <li><a routerLink="/login" class="nav-link">login</a></li>
+        <ul class="navbar-nav navbar-collapse justify-content-end">
             <li>
-                <a routerLink="/logout" class="nav-link">Logout</a>
+                <a routerLink="/login" class="nav-link" *ngIf="!isLoggedIn">Login</a>
             </li>
-        </ul> -->
+            <li>
+                <a href click="logout()" class="nav-link" *ngIf="isLoggedIn">Logout</a>
+            </li>
+        </ul>
     </nav>
 </header>
